@@ -209,7 +209,7 @@ function checkLoginState() {
             document.getElementById('prof-email').innerText = user.email;
             document.getElementById('prof-points').innerText = `${user.points || 0} Points`;
         }
-        document.querySelectorAll('.id-locked').forEach(el => el.classList.remove('id-locked'));
+        document.querySelectorAll('.matches-section').forEach(el => el.classList.remove('id-locked'));
     }
 }
 
@@ -218,5 +218,4 @@ window.switchTab = function(tabId) {
     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active-content'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(tabId).classList.add('active-content');
-    if(event && event.currentTarget) event.currentTarget.classList.add('active');
 };

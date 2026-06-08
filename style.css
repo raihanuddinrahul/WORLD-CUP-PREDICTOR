@@ -1,0 +1,57 @@
+:root {
+    --bg-black: #080808;
+    --card-black: #121212;
+    --input-bg: #1a1a1a;
+    --gold-main: #d4af37;
+    --text-white: #ffffff;
+    --text-gray: #aaaaaa;
+    --border-gold: rgba(212, 175, 55, 0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: var(--bg-black); color: var(--text-white); padding-bottom: 50px; }
+
+header { background: #000; text-align: center; padding: 35px 20px; border-bottom: 2px solid var(--gold-main); }
+header h1 { font-size: 2.2rem; letter-spacing: 1px; }
+.gold-text { color: var(--gold-main); text-shadow: 0 0 8px rgba(212, 175, 55, 0.3); }
+.gold-icon { color: var(--gold-main); font-size: 2.5rem; margin-bottom: 10px; }
+header p { color: var(--text-gray); margin-top: 5px; }
+
+.container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+.card { background-color: var(--card-black); border: 1px solid var(--border-gold); border-radius: 12px; padding: 25px; margin-bottom: 25px; }
+.card h2 { font-size: 1.3rem; margin-bottom: 20px; }
+
+.form-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
+input, select { flex: 1; min-width: 200px; background-color: var(--input-bg); color: #fff; border: 1px solid #333; padding: 12px; border-radius: 6px; outline: none; }
+input:focus, select:focus { border-color: var(--gold-main); }
+
+.btn-gold { background: linear-gradient(45deg, #aa7c11, var(--gold-main)); color: #000; border: none; padding: 12px 24px; font-weight: bold; border-radius: 6px; cursor: pointer; }
+.btn-gold-outline { background: transparent; color: var(--gold-main); border: 1px solid var(--gold-main); padding: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; width: 100%; font-size: 1.1rem; }
+.btn-gold-outline:hover { background: var(--gold-main); color: #000; }
+.btn-clear { background: #222; color: #fff; border: 1px solid #444; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+.profile-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 15px; }
+.points-badge { background-color: rgba(212, 175, 55, 0.15); color: var(--gold-main); padding: 4px 12px; border-radius: 20px; font-weight: bold; border: 1px solid var(--gold-main); }
+.hint-text { font-size: 0.8rem; color: var(--text-gray); margin-top: 10px; }
+
+.leaderboard-table { width: 100%; border-collapse: collapse; text-align: left; }
+.leaderboard-table th, .leaderboard-table td { padding: 12px; border-bottom: 1px solid #222; }
+.leaderboard-table th { color: var(--gold-main); font-size: 0.85rem; }
+
+.match-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; }
+.match-card { background-color: var(--card-black); border: 1px solid #222; border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; }
+.match-info { font-size: 0.75rem; color: var(--text-gray); margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 4px; }
+.match-teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.team { font-weight: 500; width: 42%; text-align: center; font-size: 0.95rem; }
+.versus { color: var(--gold-main); font-weight: bold; font-size: 0.8rem; }
+.score-inputs { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.score-input { width: 50px; background-color: var(--input-bg); border: 1px solid #333; color: #fff; text-align: center; padding: 8px; border-radius: 4px; font-weight: bold; font-size: 1.1rem; }
+
+.id-locked { display: none; }
+.tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #222; }
+.tab-btn { background: none; border: none; color: var(--text-gray); padding: 12px 20px; cursor: pointer; font-size: 1rem; }
+.tab-btn.active { color: var(--gold-main); border-bottom: 2px solid var(--gold-main); font-weight: bold; }
+.tab-content { display: none; }
+.tab-content.active-content { display: block; }
+.result-box { margin-top: 15px; padding: 10px; background-color: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--gold-main); display: none; }
+footer { text-align: center; padding: 25px; color: var(--text-gray); margin-top: 40px; border-top: 1px solid #111; }

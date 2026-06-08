@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 Official Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-trophy gold-icon"></i>
+            <h1>WORLD CUP 2026 <span class="gold-text">OFFICIAL PREDICTOR</span></h1>
+        </div>
+        <p>Login, Predict 104 Official Matches & Dominate the Leaderboard</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="auth-section" class="card">
+            <div id="auth-form">
+                <h2><i class="fa-solid fa-user-plus gold-text"></i> Create Account to Predict</h2>
+                <div class="form-grid">
+                    <input type="text" id="username" placeholder="Your Name">
+                    <input type="email" id="email" placeholder="Gmail Address">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <button class="btn-gold" onclick="registerUser()">Create Account & Play</button>
+            </div>
+
+            <div id="user-profile" style="display: none;">
+                <div class="profile-header">
+                    <h2><i class="fa-solid fa-circle-user gold-text"></i> Competitor Profile</h2>
+                    <button class="btn-clear" onclick="logout()">Logout</button>
+                </div>
+                <div class="profile-stats">
+                    <p><strong>Name:</strong> <span id="prof-name" class="gold-text"></span></p>
+                    <p><strong>Gmail:</strong> <span id="prof-email"></span></p>
+                    <p><strong>Your Points:</strong> <span id="prof-points" class="points-badge">0 Points</span></p>
+                </div>
+                <p class="hint-text">*Points: Correct Result = 3 Pts | Correct Draw = 1 Pt | Wrong = 0 Pts</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><i class="fa-solid fa-ranking-star gold-text"></i> Live Leaderboard</h2>
+            <div class="table-responsive">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Competitor</th>
+                            <th>Total Points</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <tr id="user-row"><td>1</td><td><span id="lb-name">You</span></td><td class="gold-text fw-bold" id="user-rank-points">0 Pts</td></tr>
+                        <tr><td>2</td><td>Ronaldo</td><td>45 Pts</td></tr>
+                        <tr><td>3</td><td>Galactico_King</td><td>38 Pts</td></tr>
+                        <tr><td>4</td><td>Mbappe</td><td>30 Pts</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card id-locked" id="award-sec">
+            <h2><i class="fa-solid fa-shoe-prints gold-text"></i> Golden Boot & Top Scorer</h2>
+            <div class="award-inputs">
+                <select id="golden-boot">
+                    <option value="">-- Select Player --</option>
+                    <option value="Kylian Mbappé">Kylian Mbappé (France)</option>
+                    <option value="Vinícius Júnior">Vinícius Júnior (Brazil)</option>
+                    <option value="Jude Bellingham">Jude Bellingham (England)</option>
+                    <option value="Lionel Messi">Lionel Messi (Argentina)</option>
+                    <option value="Erling Haaland">Erling Haaland (Norway)</option>
+                </select>
+                <button class="btn-gold" onclick="saveAwards()">Save Prediction</button>
+            </div>
+            <div id="award-result" class="result-box"></div>
+        </section>
+
+        <section class="quick-actions id-locked" id="action-sec">
+            <button class="btn-gold-outline" onclick="submitPredictions()">
+                <i class="fa-solid fa-square-check"></i> Submit & Calculate My Score
+            </button>
+        </section>
+
+        <div class="tabs id-locked" id="tabs-sec">
+            <button class="tab-btn active" onclick="switchTab('group-stage')">Group Stage (Matches 1-72)</button>
+            <button class="tab-btn" onclick="switchTab('knockouts')">Knockouts & Finals (Matches 73-104)</button>
+        </div>
+
+        <section id="group-stage" class="tab-content active-content id-locked">
+            <div class="match-grid" id="group-matches-container"></div>
+        </section>
+
+        <section id="knockouts" class="tab-content id-locked">
+            <div class="match-grid" id="knockout-matches-container"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Raihan Uddin. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
